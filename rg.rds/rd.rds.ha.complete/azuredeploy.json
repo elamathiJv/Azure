@@ -117,12 +117,6 @@
         "description": "Number of RD Gateway instances"
       }
     },
-    "WebURL": {
-      "type": "string",
-      "metadata": {
-        "description": "This is RD Gateway external FQDN. This shall be picked from existing basic RDS deploment."
-      }
-    },
     "domainNetbios": {
       "type": "string",
       "metadata": {
@@ -153,7 +147,21 @@
       "type": "string",
       "defaultValue": "gw-availabilityset"
     },
-    "rds-ha-brokerServer-name": {
+    "rds-ha-gateway-fqdn-internal-name": {
+      "type": "string",
+      "defaultValue": "concat('gateway.',parameters(adDomainName))",
+      "metadata": {
+        "description": "FQDN for Gateway Server"
+      }
+    },
+    "rds-ha-gateway-fqdn-external-name": {
+      "type": "string",
+      "defaultValue": "[concat(parameters('dnsLabelPrefix'),'.',parameters('location'),'.cloudapp.azure.com']",
+      "metadata": {
+        "description": "FQDN for Gateway Server"
+      }
+    },
+    "rds-ha-brokerServer-fqdn-internal-name": {
       "type": "string",
       "defaultValue": "concat('broker.',parameters(adDomainName))",
       "metadata": {
@@ -245,10 +253,10 @@
             "value": "[parameters('numberOfWebGwInstances')]"
           },
           "brokerServer": {
-            "value": "[variables('rds-ha-brokerServer-name')]"
+            "value": "[variables('rds-ha-brokerServer-fqdn-internal-name')]"
           },
           "WebURL": {
-            "value": "[parameters('WebURL')]"
+            "value": "[variables('rds-ha-gateway-fqdn-external-name')]"
           },
           "domainNetbios": {
             "value": "[parameters('domainNetbios')]"
