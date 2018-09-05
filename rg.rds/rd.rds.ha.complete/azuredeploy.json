@@ -136,7 +136,7 @@
     "rds-ha-broker-uri": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.broker/azuredeploy.json",
     "rds-ha-gateway-availablilitySet-name": "gw-availabilityset",
     "rds-ha-gateway-fqdn-internal-name": "concat('gateway.',parameters(adDomainName))",
-    "rds-ha-gateway-fqdn-external-name": "[concat(parameters('gwd', 'rdshademo1','.',parameters('location'),'.cloudapp.azure.com')]",
+    "rds-ha-gateway-fqdn-external-name": "[concat('gwd', 'rdshademo1','.',parameters('location'),'.cloudapp.azure.com')]",
     "rds-ha-brokerServer-fqdn-internal-name": "concat('broker.',parameters(adDomainName))"
   },
   "resources": [
@@ -248,6 +248,9 @@
           },
           "existingSubnet": {
             "value": "[parameters('adSubnetName')]"
+          },
+          "adVnetRG": {
+            "value": "[parameters('adVnetRG')]"
           }
         }
       }
