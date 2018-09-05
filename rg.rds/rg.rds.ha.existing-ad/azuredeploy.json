@@ -105,24 +105,24 @@
     },
     "backendAddressPools": {
       "type": "string",
-      "defaultValue": "LBBAP",
+      "defaultValue": " ",
       "metadata": {
         "description": "The backendAddressPools name must match from the RDS deployment. And default value taken by template is LBBAP."
       }
     }
   },
-    "variables": {
-        "gwdnsLabelPrefix": "[toLower(concat('gwd', resourceGroup().name))]",
-        "cbdnsLabelPrefix": "[toLower(concat('cbd', resourceGroup().name))]",
-        "imagePublisher": "MicrosoftWindowsServer",
-        "imageOffer": "WindowsServer",
-        "dnsServerPrivateIp": "10.40.0.4",
-        "subnet-id": "[concat(resourceId(parameters('adVnetRG'),'Microsoft.Network/virtualNetworks',parameters('adVnetName')),'/subnets/',parameters('adSubnetName'))]",
-        "publicIpRef": "publicIp",
-        "brokerIpRef": "brokerpublicIp",
-        "gatewayIpRef": "gatewaypublicIp",
-        "assetLocation": "https://raw.githubusercontent.com/Azure/azure-QuickStart-Templates/master/rds-deployment/"
-    },
+  "variables": {
+    "gwdnsLabelPrefix": "[toLower(concat('gwd', 'rdshademo1'))]",
+    "cbdnsLabelPrefix": "[toLower(concat('cbd', 'rdshademo1'))]",
+    "imagePublisher": "MicrosoftWindowsServer",
+    "imageOffer": "WindowsServer",
+    "dnsServerPrivateIp": "10.40.0.4",
+    "subnet-id": "[concat(resourceId(parameters('adVnetRG'),'Microsoft.Network/virtualNetworks',parameters('adVnetName')),'/subnets/',parameters('adSubnetName'))]",
+    "publicIpRef": "publicIp",
+    "brokerIpRef": "brokerpublicIp",
+    "gatewayIpRef": "gatewaypublicIp",
+    "assetLocation": "https://raw.githubusercontent.com/Azure/azure-QuickStart-Templates/master/rds-deployment/"
+  },
     "resources": [
         {
             "apiVersion": "2015-06-15",

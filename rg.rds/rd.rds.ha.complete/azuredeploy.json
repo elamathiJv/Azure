@@ -131,43 +131,13 @@
     }
   },
   "variables": {
-    "rds-without-existingAD-uri": {
-      "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.existing-ad/azuredeploy.json"
-    },
-    "rds-ha-gateway-uri": {
-      "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.gateway/azuredeploy.json"
-    },
-    "rds-ha-broker-uri": {
-      "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.broker/azuredeploy.json"
-    },
-    "rds-ha-gateway-availablilitySet-name": {
-      "type": "string",
-      "defaultValue": "gw-availabilityset"
-    },
-    "rds-ha-gateway-fqdn-internal-name": {
-      "type": "string",
-      "defaultValue": "concat('gateway.',parameters(adDomainName))",
-      "metadata": {
-        "description": "FQDN for Gateway Server"
-      }
-    },
-    "rds-ha-gateway-fqdn-external-name": {
-      "type": "string",
-      "defaultValue": "[concat(parameters('dnsLabelPrefix'),'.',parameters('location'),'.cloudapp.azure.com']",
-      "metadata": {
-        "description": "FQDN for Gateway Server"
-      }
-    },
-    "rds-ha-brokerServer-fqdn-internal-name": {
-      "type": "string",
-      "defaultValue": "concat('broker.',parameters(adDomainName))",
-      "metadata": {
-        "description": "FQDN for Broker Server"
-      }
-    }
+    "rds-without-existingAD-uri": "https://github.com/elamathiJv/Azure-Deployment-Templates/raw/master/rg.rds/rg.rds.ha.existing-ad/azuredeploy.json",
+    "rds-ha-gateway-uri": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.gateway/azuredeploy.json",
+    "rds-ha-broker-uri": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.broker/azuredeploy.json",
+    "rds-ha-gateway-availablilitySet-name": "gw-availabilityset",
+    "rds-ha-gateway-fqdn-internal-name": "concat('gateway.',parameters(adDomainName))",
+    "rds-ha-gateway-fqdn-external-name": "[concat(parameters('gwd', 'rdshademo1','.',parameters('location'),'.cloudapp.azure.com')]",
+    "rds-ha-brokerServer-fqdn-internal-name": "concat('broker.',parameters(adDomainName))"
   },
   "resources": [
     {
@@ -221,6 +191,9 @@
       "name": "rds-ha-gateway-Deployment",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2016-02-01",
+      "dependsOn": [
+        "rds-ha-without-existingAD-Deployment"
+      ],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
