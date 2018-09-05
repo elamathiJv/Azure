@@ -139,15 +139,15 @@
   "variables": {
     "rds-without-existingAD-uri": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/rds-deployment-existing-ad/azuredeploy.json"
+      "defaultValue": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.existing-ad/azuredeploy.json"
     },
     "rds-ha-gateway-uri": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/rds-deployment-ha-gateway/azuredeploy.json"
+      "defaultValue": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.gateway/azuredeploy.json"
     },
     "rds-ha-broker-uri": {
       "type": "string",
-      "defaultValue": "https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/rds-deployment-ha-broker/azuredeploy.json"
+      "defaultValue": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg.rds/rg.rds.ha.broker/azuredeploy.json"
     },
     "rds-ha-gateway-availablilitySet-name": {
       "type": "string",
