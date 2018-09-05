@@ -324,9 +324,9 @@
             "version": "latest"
           },
           "osDisk": {
-            "name": "osdisk",
-            "vhd": {
-              "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', parameters('storageAccountName')),'2016-01-01').primaryEndpoints.blob,'/vhds/gateway',copyindex(),'-osdisk.vhd')]"
+            "name": "[concat('gw-vm-',copyindex(),'_osdisk')]",
+            "managedDisk": {
+              "storageAccountType": "Standard_LRS"
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
