@@ -596,7 +596,7 @@
                     "osDisk": {
                         "name": "cb_OSDisk",
                         "caching": "ReadWrite",
-                        "createOption": "FromImage",
+                      "createOption": "FromImage",
                         "managedDisk": {
                             "storageAccountType": "Standard_LRS"
                         }
