@@ -241,7 +241,7 @@
             "value": "[parameters('imageSKU')]"
           },
           "vmSize": {
-            "value": "[parameters('rdshVmSize')]"
+            "value": "Standard_A2"
           },
           "existingVnet": {
             "value": "[parameters('adVnetName')]"
