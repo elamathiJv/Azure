@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "rg-rds-ha", "rg-rds-ha\rg-rds-ha.deployproj", "{85362806-35B0-433B-9B4F-F0E69AC574C9}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "rds-deployment-existing-ad", "rds-deployment-existing-ad\rds-deployment-existing-ad.deployproj", "{BD7DFB6A-10A2-4DCB-A850-B6F94E13ECA7}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "rds-deployment-ha-broker", "rds-deployment-ha-broker\rds-deployment-ha-broker.deployproj", "{33C480F3-DBD6-4100-9512-87940E70E437}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "rds-deployment-ha-gateway", "rds-deployment-ha-gateway\rds-deployment-ha-gateway.deployproj", "{EFD7E47C-CFAD-485D-8512-870E6733F277}"
+EndProject
+Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "rds-update-certificate", "rds-update-certificate\rds-update-certificate.deployproj", "{3414B21C-FCC2-405C-AA6F-0BF85D0258FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85362806-35B0-433B-9B4F-F0E69AC574C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85362806-35B0-433B-9B4F-F0E69AC574C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85362806-35B0-433B-9B4F-F0E69AC574C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85362806-35B0-433B-9B4F-F0E69AC574C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7DFB6A-10A2-4DCB-A850-B6F94E13ECA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7DFB6A-10A2-4DCB-A850-B6F94E13ECA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7DFB6A-10A2-4DCB-A850-B6F94E13ECA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7DFB6A-10A2-4DCB-A850-B6F94E13ECA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C480F3-DBD6-4100-9512-87940E70E437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C480F3-DBD6-4100-9512-87940E70E437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C480F3-DBD6-4100-9512-87940E70E437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C480F3-DBD6-4100-9512-87940E70E437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD7E47C-CFAD-485D-8512-870E6733F277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD7E47C-CFAD-485D-8512-870E6733F277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD7E47C-CFAD-485D-8512-870E6733F277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD7E47C-CFAD-485D-8512-870E6733F277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3414B21C-FCC2-405C-AA6F-0BF85D0258FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3414B21C-FCC2-405C-AA6F-0BF85D0258FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3414B21C-FCC2-405C-AA6F-0BF85D0258FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3414B21C-FCC2-405C-AA6F-0BF85D0258FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC82CDBF-C26D-4082-AC5B-F9889D4B96EC}
+	EndGlobalSection
+EndGlobal

@@ -140,60 +140,60 @@
     "rds-ha-brokerServer-fqdn-internal-name": "concat('broker.',parameters(adDomainName))"
   },
   "resources": [
-    {
-      "name": "rds-ha-without-existingAD-Deployment",
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2016-02-01",
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "[variables('rds-without-existingAD-uri')]",
-          "contentVersion": "1.0.0.0"
-        },
-        "parameters": {
-          "dnsLabelPrefix": {
-            "value": "[parameters('dnsLabelPrefix')]"
-          },
-          "adDomainName": {
-            "value": "[parameters('adDomainName')]"
-          },
-          "adVnetName": {
-            "value": "[parameters('adVnetName')]"
-          },
-          "adVnetRG": {
-            "value": "[parameters('adVnetRG')]"
-          },
-          "adSubnetName": {
-            "value": "[parameters('adSubnetName')]"
-          },
-          "adminUsername": {
-            "value": "[parameters('adminUsername')]"
-          },
-          "adminPassword": {
-            "value": "[parameters('adminPassword')]"
-          },
-          "imageSKU": {
-            "value": "[parameters('imageSKU')]"
-          },
-          "numberOfRdshInstances": {
-            "value": "[parameters('numberOfRdshInstances')]"
-          },
-          "rdshVmSize": {
-            "value": "[parameters('rdshVmSize')]"
-          },
-          "location": {
-            "value": "[parameters('location')]"
-          }
-        }
-      }
-    },
+    //{
+    //  "name": "rds-ha-without-existingAD-Deployment",
+    //  "type": "Microsoft.Resources/deployments",
+    //  "apiVersion": "2016-02-01",
+    //  "properties": {
+    //    "mode": "Incremental",
+    //    "templateLink": {
+    //      "uri": "[variables('rds-without-existingAD-uri')]",
+    //      "contentVersion": "1.0.0.0"
+    //    },
+    //    "parameters": {
+    //      "dnsLabelPrefix": {
+    //        "value": "[parameters('dnsLabelPrefix')]"
+    //      },
+    //      "adDomainName": {
+    //        "value": "[parameters('adDomainName')]"
+    //      },
+    //      "adVnetName": {
+    //        "value": "[parameters('adVnetName')]"
+    //      },
+    //      "adVnetRG": {
+    //        "value": "[parameters('adVnetRG')]"
+    //      },
+    //      "adSubnetName": {
+    //        "value": "[parameters('adSubnetName')]"
+    //      },
+    //      "adminUsername": {
+    //        "value": "[parameters('adminUsername')]"
+    //      },
+    //      "adminPassword": {
+    //        "value": "[parameters('adminPassword')]"
+    //      },
+    //      "imageSKU": {
+    //        "value": "[parameters('imageSKU')]"
+    //      },
+    //      "numberOfRdshInstances": {
+    //        "value": "[parameters('numberOfRdshInstances')]"
+    //      },
+    //      "rdshVmSize": {
+    //        "value": "[parameters('rdshVmSize')]"
+    //      },
+    //      "location": {
+    //        "value": "[parameters('location')]"
+    //      }
+    //    }
+    //  }
+    //},
     {
       "name": "rds-ha-gateway-Deployment",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2016-02-01",
-      "dependsOn": [
-        "rds-ha-without-existingAD-Deployment"
-      ],
+      //"dependsOn": [
+      //  "rds-ha-without-existingAD-Deployment"
+      //],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -229,7 +229,7 @@
             "value": "[variables('rds-ha-brokerServer-fqdn-internal-name')]"
           },
           "WebURL": {
-            "value": "[variables('rds-ha-gateway-fqdn-external-name')]"
+            "value": "[variables('rds-ha-gateway-fqdn-internal-name')]"
           },
           "domainNetbios": {
             "value": "[parameters('domainNetbios')]"
