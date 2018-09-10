@@ -14,9 +14,7 @@
 
         "description": "Unique public DNS prefix for the deployment. The fqdn will look something like '<dnsname>.westus.cloudapp.azure.com'. Up to 62 chars, digits or dashes, lowercase, should start with a letter: must conform to '^[a-z][a-z0-9-]{1,61}[a-z0-9]$'. For example johndns1 will result the final RDWEB access url like https://johndns1.westus.cloudapp.azure.com/RDWeb"
 
-      },
-
-      "defaultValue": "gateway"
+      }
 
     },
 
@@ -28,9 +26,7 @@
 
         "description": "The name of the existing AD domain. For example contoso.com"
 
-      },
-
-      "defaultValue": "contoso.com"
+      }
 
     },
 
@@ -42,9 +38,19 @@
 
         "description": "The existing vnet name of AD domain. For example 'vnet' or 'contosovnet'"
 
-      },
+      }
 
-      "defaultValue": "vnet"
+    },
+
+    "existingVnetRGName": {
+
+      "type": "string",
+
+      "metadata": {
+
+        "description": "The  resources group of the existing AD domain Vnet Name. "
+
+      }
 
     },
 
@@ -56,9 +62,7 @@
 
         "description": "The existing subnet name of AD domain. For example 'subnet' or 'contososubnet'"
 
-      },
-
-      "defaultValue": "subnet"
+      }
 
     },
 
@@ -382,21 +386,26 @@
 
           },
 
-          "existingDomainName": {
+          "adDomainName": {
 
             "value": "[parameters('existingDomainName')]"
 
           },
 
-          "existingVnetName": {
+          "adVnetName": {
 
             "value": "[parameters('existingVnetName')]"
 
           },
 
-          "existingSubnetName": {
+          "adSubnetName": {
 
             "value": "[parameters('existingSubnetName')]"
+
+          },
+          "adVnetRG": {
+
+            "value": "[parameters('existingVnetRGName')]"
 
           },
 
@@ -557,6 +566,11 @@
           "existingSubnetName": {
 
             "value": "[parameters('existingSubnetName')]"
+
+          },
+          "existingVnetResourceGroup": {
+
+            "value": "[parameters('existingVnetRGName')]"
 
           }
 
