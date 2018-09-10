@@ -379,9 +379,9 @@
                         "typeHandlerVersion": "1.9",
                         "autoUpgradeMinorVersion": true,
                         "settings": {
-                            "fileUris": [
-                                "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/rds-deployment-ha-gateway/Scripts/WebAndGwFarmAdd_PostConfig1.1.ps1"
-                            ]
+                          "fileUris": [
+                            "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg-rds-ha/rds-deployment-ha-gateway/Scripts/WebAndGwFarmAdd_PostConfig1.1.ps1"
+                          ]
                         },
                         "protectedSettings": {
                             "Items": {

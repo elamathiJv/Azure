@@ -278,7 +278,7 @@
 
       },
 
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/"
+      "defaultValue": "https://raw.githubusercontent.com/elamathiJv/Azure-Deployment-Templates/master/rg-rds-ha/"
 
     }
 
